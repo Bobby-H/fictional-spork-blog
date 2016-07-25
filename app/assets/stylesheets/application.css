@@ -14,14 +14,15 @@
  *= require_self
  */
  a {
-   color: #8EE5EE;
-/*
-   &:visited {
-     color: #666;
-   }
-
-   &:hover {
-     color: #fff;
-     background-color: #000;
-   }*/
+   color: #239e2b;
  }
+.cant-see-me {
+  display: none;
+}
+.container{
+	background-color: rgba(255,255,255,0.8);
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+}
