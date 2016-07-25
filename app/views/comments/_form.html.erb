@@ -8,16 +8,6 @@
         <li><%= message %></li>
       <% end %>
       </ul>
-      <ul>
-        <% @blog.each do |blog| %>
-
-            <% blog.comments.each do |comment| %>
-
-                <p><%= comment.author %></p>
-                <p><%= comment.comment_entry %></p>
-            <% end %>
-        <% end %>
-      </ul>
     </div>
   <% end %>
 
