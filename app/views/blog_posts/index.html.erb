@@ -1,5 +1,23 @@
 <p id="notice"><%= notice %></p>
-
+<% if user_signed_in? %>
+  <div class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to "All Blog Posts", root_path, class: "navbar-brand" %>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to "Your Posts", your_posts_path %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to 'New Blog post', new_blog_post_path %></li>
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
 <h1>Welcome to Hipsterville, <%= current_user.email %>!</h1>
 
 <div class="row">
@@ -24,5 +42,3 @@
   <% end %>
 </div>
 <br>
-
-<%= link_to 'New Blog post', new_blog_post_path %>
