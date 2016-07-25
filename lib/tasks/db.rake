@@ -12,16 +12,3 @@ namespace :db do
     end
   end
 end
-
-namespace :db do
-  desc "populates w/ comments"
-    task populate: :environment do
-      Comment.destroy_all
-      200.times do
-        Comment.create!(
-        author: Faker::Name.name,
-        comment_entry: Faker::Hipster.paragraph(1)
-        )
-      end
-    end
-end
