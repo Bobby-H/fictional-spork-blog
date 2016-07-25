@@ -15,16 +15,18 @@
     Leave a comment
   </div>
   <div class="panel-body">
-    <%= render 'comments/form' %>
-  </div>
+		by <strong><%= @blog_post.user %></strong>
+	</div>
 </div>
 <div class="panel panel-default">
   <div class="panel-header">
     <h4>Comments</h4>
     <%= @blog_post.comments.each do |comment| %>
-      <div class="panel-body">
-        <p><strong><%= comment.author %></strong> said: </p>
-        <p><%= comment.comment_entry %> at <%= comment.created_at.strftime('%m/%d/%Y at %I:%M%p') %></p>
+      <div class="panel-success">
+        <div class="panel-body">
+          <p><strong><%= comment.user %></strong> said: </p>
+          <p><%= comment.comment_entry %> at <%= comment.created_at.strftime('%m/%d/%Y at %I:%M%p') %></p>
+        </div>
       </div>
     <% end %>
   </div>

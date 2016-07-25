@@ -5,14 +5,16 @@
 <div class="row">
   <%= @blog_posts.each do |blog_post| %>
   <div class="col-md-6">
-    <div class="panelpanel-default">
+    <div class="panel panel-default">
       <div class="panelpanel-heading">
         <p><strong><%= link_to blog_post.title, blog_post %></strong> by <%= blog_post.author %></p>
         <div class="posted-at">posted at: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></div>
       </div>
       <div class="panel-body">
-        <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p>
-      </div>
+          by <%= blog_post.user %><br />
+          <p><span class="posted-at">posted at: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span></p>
+          <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
+        </div>
       <div class="panel-footer">
         <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
         <%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %>

@@ -12,10 +12,15 @@
   <% end %>
 
   <div class="form-group">
+    <%= f.label :title, class:"sr-only" %>
     <%= f.text_field :title, class: "form-control", placeholder: "Post Title" %>
   </div>
   <div class="form-group">
+    <%= f.label :blog_entry, class:"sr-only" %>
     <%= f.text_area :blog_entry, class: "form-control", :rows => 20, placeholder: "Speak Your Mind!" %>
+  </div>
+  <div class="form-group cant-see-me">
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
