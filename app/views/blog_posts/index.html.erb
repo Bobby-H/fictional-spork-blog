@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Hipsterville</h1>
+<h1>Welcome to Hipsterville, <%= current_user.email %>!</h1>
 
 <div class="row">
   <%= @blog_posts.each do |blog_post| %>
