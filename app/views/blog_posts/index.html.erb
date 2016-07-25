@@ -8,6 +8,7 @@
     <div class="panelpanel-default">
       <div class="panelpanel-heading">
         <p><strong><%= link_to blog_post.title, blog_post %></strong> by <%= blog_post.author %></p>
+        <div class="posted-at">posted at: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></div>
       </div>
       <div class="panel-body">
         <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p>
