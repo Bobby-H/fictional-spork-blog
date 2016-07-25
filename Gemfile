@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98a5b8d35fa15d703c33173a6e426e238fc5998e
 gem 'devise'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
